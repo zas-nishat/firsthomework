@@ -2,13 +2,13 @@ import java.util.Scanner;
 
 public class task1 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        try (Scanner input = new Scanner(System.in)) {
+            int v = input.nextInt();
+            int n = input.nextInt();
 
-        int v = input.nextInt();
-        int n = input.nextInt();
+            int k = (v * 12) / n;
 
-        int k = (v * 12) / n;
-
-        System.out.println(k);
+            System.out.println(k);
+        }
     }
 }
