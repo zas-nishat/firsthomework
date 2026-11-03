@@ -1,20 +1,17 @@
 import java.util.Scanner;
 
-public class Task2 {
+public class Task3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a positive integer N: ");
+        System.out.print("Enter an integer N (0 to 12): ");
         int n = scanner.nextInt();
 
-        int count = 0;
-        System.out.println("Even numbers:");
+        long factorial = 1;
         for (int i = 1; i <= n; i++) {
-            if (i % 2 == 0) {
-                System.out.print(i + " ");
-                count++;
-            }
+            factorial *= i;
         }
-        System.out.println("\nCount: " + count);
+
+        System.out.println("Factorial of " + n + " is: " + factorial);
         scanner.close();
     }
 }
